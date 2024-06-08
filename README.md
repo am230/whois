@@ -1,3 +1,3 @@
 # whois
 
-Describe your project here.
+簡単なwhoisを送るだけのプログラム
