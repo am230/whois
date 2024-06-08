@@ -38,7 +38,7 @@ def parse_record(record: bytes) -> dict[bytes, bytes]:
     for line in record.split(b"\n"):
         if line.startswith(b"%"):
             continue
-        if not line.strip():
+        if b":" not in line:
             continue
         key, value = line.split(b":", 1)
         result[key.strip()] = value.strip()
